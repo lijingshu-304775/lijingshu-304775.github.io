@@ -27,7 +27,7 @@
 <meta property="og:description" content="基本环境准备  Git 安装地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloads,选择你合适的系统安装即可。 Nodejs 安装地址：https:&#x2F;&#x2F;nodejs.org。  有一点要注意的是 Git 安装时如果不知道每一步是什么意思，最好不要改默认设置，一定要添加到 Path，nodejs 也是要添加到 Path。  在 GitHub 上注册一个账号，会点英语的人">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-23T10:30:59.000Z">
-<meta property="article:modified_time" content="2025-05-24T04:49:07.580Z">
+<meta property="article:modified_time" content="2025-05-24T04:59:53.330Z">
 <meta property="article:author" content="lijingshu">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          938 字
+          880 字
         
       </span>
     
@@ -377,12 +377,6 @@ src="https://cdn.luogu.com.cn/upload/image_hosting/f66sjhrb.png" srcset="/img/lo
 src="https://cdn.luogu.com.cn/upload/image_hosting/ehmfgls3.png" srcset="/img/loading.gif" lazyload /></p>
 <p>标题随意填，将刚复制的 <code>id_rsa.pub</code> 密钥粘贴到 Key中，最后
 Add SSH key。</p>
-<p>在 Git Bash 中检测 GitHub 公钥设置是否成功，输入
-<code>ssh git@github.com</code>。</p>
-<p>如果出现 <code>Hi xxx! You've....</code> 就说明成功了！</p>
-<p>如果不成功请在 <code>C:\Users\admin\.ssh</code> 中新建一个
-<code>config</code> 无后缀名打开输入：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">Host github<span class="hljs-selector-class">.com</span><br>  Hostname ssh<span class="hljs-selector-class">.github</span><span class="hljs-selector-class">.com</span><br>  Port <span class="hljs-number">443</span><br></code></pre></td></tr></table></figure>
 <h2 id="连接-hexo-与-github">连接 Hexo 与 GitHub</h2>
 <p>获取 ssh 地址：</p>
 <p><img
