@@ -19,22 +19,22 @@
   <meta name="author" content="lijingshu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：   方法一 操作 如果你是 edge 浏览器，那么你把 &lt;edge:&#x2F;&#x2F;settings&#x2F;privacy&gt; 拖到网址栏上去，而不是直接点击。 如果你是其他浏览器，请自行查找资料来完成下面的步骤，这里以 edge 为例： 下滑有一个 使用安全的 DNS 指定如何查找网站的网络地址 把它选上，">
+    <meta name="description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 更好的使用方式：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;article&#x2F;zbp0srrq。 警告：严禁抄袭。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：  四个物品的魔法值严格递增：Xa &lt; Xb &lt; Xc &lt; Xd。 X">
 <meta property="og:type" content="article">
-<meta property="og:title" content="继续浏览 Greasy Fork 的方法">
-<meta property="og:url" content="https://lijingshu-304775.github.io/2025/05/01/%E7%BB%A7%E7%BB%AD%E6%B5%8F%E8%A7%88-Greasy-Fork-%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="洛谷P2119题解">
+<meta property="og:url" content="https://lijingshu-304775.github.io/2025/05/25/%E6%B4%9B%E8%B0%B7P2119%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="lijingshu&#39;s blog">
-<meta property="og:description" content="众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：   方法一 操作 如果你是 edge 浏览器，那么你把 &lt;edge:&#x2F;&#x2F;settings&#x2F;privacy&gt; 拖到网址栏上去，而不是直接点击。 如果你是其他浏览器，请自行查找资料来完成下面的步骤，这里以 edge 为例： 下滑有一个 使用安全的 DNS 指定如何查找网站的网络地址 把它选上，">
+<meta property="og:description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 更好的使用方式：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;article&#x2F;zbp0srrq。 警告：严禁抄袭。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：  四个物品的魔法值严格递增：Xa &lt; Xb &lt; Xc &lt; Xd。 X">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-01T05:55:27.000Z">
-<meta property="article:modified_time" content="2025-05-09T08:01:07.126Z">
+<meta property="article:published_time" content="2025-05-25T05:15:34.000Z">
+<meta property="article:modified_time" content="2025-05-25T05:16:54.826Z">
 <meta property="article:author" content="lijingshu">
-<meta property="article:tag" content="网络">
+<meta property="article:tag" content="NOIP普及组">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>继续浏览 Greasy Fork 的方法 - lijingshu&#39;s blog</title>
+  <title>洛谷P2119题解 - lijingshu&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +216,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="继续浏览 Greasy Fork 的方法"></span>
+            <span id="subtitle" data-typed-text="洛谷P2119题解"></span>
           
         </div>
 
@@ -227,8 +227,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-01 13:55" pubdate>
-          2025年5月1日 下午
+        <time datetime="2025-05-25 13:15" pubdate>
+          2025年5月25日 下午
         </time>
       </span>
     
@@ -239,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          324 字
+          525 字
         
       </span>
     
@@ -250,7 +250,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -287,56 +287,45 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">继续浏览 Greasy Fork 的方法</h1>
+            <h1 id="seo-header">洛谷P2119题解</h1>
             
             
               <div class="markdown-body">
                 
-                <p>众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：</p>
-<p><img
-src="https://cdn.luogu.com.cn/upload/image_hosting/4um55sx1.png" srcset="/img/loading.gif" lazyload /></p>
-<hr />
-<h2 id="方法一">方法一</h2>
-<h3 id="操作">操作</h3>
-<p>如果你是 edge 浏览器，那么你把 &lt;edge://settings/privacy&gt;
-<strong>拖到网址栏上去，而不是直接点击</strong>。</p>
-<p>如果你是其他浏览器，请自行查找资料来完成下面的步骤，这里以 edge
-为例：</p>
-<p>下滑有一个 <code>使用安全的 DNS 指定如何查找网站的网络地址</code>
-把它选上，再点击 <code>请选择服务提供商</code> ，在下面选择
-<code>Cloudflare(1.1.1.1)</code>,如下图所示：</p>
-<p><img
-src="https://cdn.luogu.com.cn/upload/image_hosting/cfv32wpc.png" srcset="/img/loading.gif" lazyload /></p>
-<p>这时你可能还要<strong>重启浏览器</strong>。</p>
-<h3 id="测试">测试</h3>
-<p><img
-src="https://cdn.luogu.com.cn/upload/image_hosting/ivgsxljv.png" srcset="/img/loading.gif" lazyload /></p>
-<p>成功！现在你就能在 Greasy Fork 上下载各种各样的脚本了。</p>
-<h2 id="方法二">方法二</h2>
-<p>使用镜像，常用镜像有：</p>
+                <p>原题链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2119"
+class="uri">https://www.luogu.com.cn/problem/P2119</a>。</p>
+<p>更好的使用方式：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/zbp0srrq"
+class="uri">https://www.luogu.com.cn/article/zbp0srrq</a>。</p>
+<p><strong>警告：严禁抄袭</strong>。</p>
+<h2 id="分析">分析</h2>
+<p>这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。</p>
+<p>魔法阵具体条件是：</p>
 <ol type="1">
-<li><p><a target="_blank" rel="noopener" href="https://greasyfork.cc"
-class="uri">https://greasyfork.cc</a>。</p></li>
-<li><p><a target="_blank" rel="noopener" href="https://gf.qytechs.cn"
-class="uri">https://gf.qytechs.cn</a>。</p></li>
-<li><p><a target="_blank" rel="noopener" href="https://greasyfork.cloud"
-class="uri">https://greasyfork.cloud</a>。</p></li>
+<li><p>四个物品的魔法值严格递增：<span
+class="math inline"><em>X</em><sub><em>a</em></sub> &lt; <em>X</em><sub><em>b</em></sub> &lt; <em>X</em><sub><em>c</em></sub> &lt; <em>X</em><sub><em>d</em></sub></span>。</p></li>
+<li><p><span
+class="math inline"><em>X</em><sub><em>b</em></sub> − <em>X</em><sub><em>a</em></sub> = 2 × (<em>X</em><sub><em>d</em></sub> − <em>X</em><sub><em>c</em></sub>)</span>。</p></li>
+<li><p><span
+class="math inline"><em>X</em><sub><em>b</em></sub> − <em>X</em><sub><em>a</em></sub> &lt; (<em>X</em><sub><em>c</em></sub> − <em>X</em><sub><em>b</em></sub>) ÷ 3</span>。</p></li>
 </ol>
-<p>如要使用，直接把 greasyfork.org 改为上面的镜像即可。</p>
-<h2 id="方法三">方法三</h2>
-<p>使用 watt toolkit，这个直接在微软商店搜索并下载即可。</p>
-<p>下载好了以后打开它点到左边的网络加速把 GitHub 勾上即可。</p>
-<h2 id="题外话">题外话</h2>
-<p>推荐链接 1：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/fg0zfzpy">Luogu
-优化插件</a>。</p>
-<p>推荐链接 2：<a
-target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/p2ri0gub">油猴插件 LG &amp; AT
-&amp; CF</a>。</p>
-<p>推荐链接 3：<a
-target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/dqyc4vbg">分享一些神奇的好用的拓展&amp;脚本【精选版】</a>。</p>
-<p>推荐链接 4：<a
-target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">Tampermonkey
-优化插件</a>。</p>
+<p>首先统计每个魔法值出现的次数，这样可以方便后续的计算。</p>
+<p>再遍历可能的 <span
+class="math inline"><em>t</em></span>：对于每个可能的 <span
+class="math inline"><em>t</em></span>，使得 <span
+class="math inline">9 × <em>t</em> &lt; <em>n</em> − 1</span>。这个
+<span class="math inline"><em>t</em></span>
+是一个关键参数，用于确定四元组的范围。</p>
+<p>然后遍历可能的 <span class="math inline"><em>a</em></span>：对于每个
+<span class="math inline"><em>a</em></span>，使得 <span
+class="math inline"><em>a</em> × 9 × <em>t</em> + 1 &lt; <em>n</em></span>。这个
+<span class="math inline"><em>a</em></span> 是四元组中的最小值。</p>
+<p>最后统计满足条件的四元组，在内层循环中，统计满足条件的四元组数量，并更新答案数组。</p>
+<p>用这样的思路，这道题写代码就非常简单了。</p>
+<p>下面是按照上面的步骤写出的代码。</p>
+<h2 id="ac-代码">AC 代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> n, m, cnt[<span class="hljs-number">16000</span>], x[<span class="hljs-number">41000</span>], ans[<span class="hljs-number">40000</span>][<span class="hljs-number">5</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	cin &gt;&gt; n &gt;&gt; m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= m;i++)&#123;<br>		cin &gt;&gt; x[i];<br>		cnt[x[i]]++; <span class="hljs-comment">// 统计每个魔法值出现的次数</span><br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> t = <span class="hljs-number">1</span>;<span class="hljs-number">9</span> * t &lt;= n;t++)&#123; <span class="hljs-comment">// 遍历可能的 t</span><br>		<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>, a, b, c, d;<br>		<span class="hljs-keyword">for</span>(a = n - <span class="hljs-number">9</span> * t - <span class="hljs-number">1</span>;a &gt; <span class="hljs-number">0</span>;a--)&#123; <span class="hljs-comment">// 遍历可能的 a</span><br>			b = a + <span class="hljs-number">2</span> * t; <span class="hljs-comment">// 计算对应的 b</span><br>			c = a + <span class="hljs-number">8</span> * t + <span class="hljs-number">1</span>; <span class="hljs-comment">// 计算对应的 c</span><br>			d = a + <span class="hljs-number">9</span> * t + <span class="hljs-number">1</span>; <span class="hljs-comment">// 计算对应的 d</span><br>			res += cnt[c] * cnt[d]; <span class="hljs-comment">// 统计满足条件的四元组数量</span><br>			ans[a][<span class="hljs-number">0</span>] += cnt[b] * res; <span class="hljs-comment">// 更新答案</span><br>			ans[b][<span class="hljs-number">1</span>] += cnt[a] * res; <span class="hljs-comment">// 更新答案</span><br>		&#125;<br>		res = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(d = <span class="hljs-number">9</span> * t + <span class="hljs-number">2</span>;d &lt;= n;d++)&#123; <span class="hljs-comment">// 第二次操作，同上</span><br>			a = d - <span class="hljs-number">9</span> * t - <span class="hljs-number">1</span>; <br>			b = d - <span class="hljs-number">7</span> * t - <span class="hljs-number">1</span>;<br>			c = d - t;<br>			res += cnt[a] * cnt[b];<br>			ans[c][<span class="hljs-number">2</span>] += cnt[d] * res;<br>			ans[d][<span class="hljs-number">3</span>] += cnt[c] * res;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= m;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			cout &lt;&lt; ans[x[i]][j] &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span>;<br>		&#125;<br>		cout &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>AC 记录：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/218437099"
+class="uri">https://www.luogu.com.cn/record/218437099</a>。</p>
 
                 
               </div>
@@ -355,7 +344,7 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%A7%91%E6%8A%80%C2%B7%E5%B7%A5%E7%A8%8B/" class="category-chain-item">科技·工程</a>
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
   
   
 
@@ -370,7 +359,7 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%BD%91%E7%BB%9C/" class="print-no-link">#网络</a>
+        <a href="/tags/NOIP%E6%99%AE%E5%8F%8A%E7%BB%84/" class="print-no-link">#NOIP普及组</a>
       
     </div>
   
@@ -382,8 +371,8 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>继续浏览 Greasy Fork 的方法</div>
-      <div>https://lijingshu-304775.github.io/2025/05/01/继续浏览-Greasy-Fork-的方法/</div>
+      <div>洛谷P2119题解</div>
+      <div>https://lijingshu-304775.github.io/2025/05/25/洛谷P2119题解/</div>
     </div>
     <div class="license-meta">
       
@@ -395,7 +384,7 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年5月1日</div>
+          <div>2025年5月25日</div>
         </div>
       
       
@@ -427,18 +416,12 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/05/03/VScode%E9%85%8D%E7%BD%AEC-C-%E7%8E%AF%E5%A2%83/" title="VScode配置C/C++环境">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">VScode配置C/C++环境</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/05/01/%E6%B4%9B%E8%B0%B7P5662%E9%A2%98%E8%A7%A3/" title="洛谷P5662题解">
-                        <span class="hidden-mobile">洛谷P5662题解</span>
+                      <a href="/2025/05/23/hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="hexo 搭建个人博客">
+                        <span class="hidden-mobile">hexo 搭建个人博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -495,6 +478,12 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -687,6 +676,49 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/lj91a3c8">
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
