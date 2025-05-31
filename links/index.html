@@ -81,7 +81,7 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
-<body>
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
   
 
   <header>
@@ -240,13 +240,13 @@
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="ylxredbag&#39;s blog"
+              <img src="https://pic1.imgdb.cn/item/683a8aa158cb8da5c81e80ed.jpg" srcset="/img/loading.gif" lazyload alt="ylxredbag&#39;s blog"
                    onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
             <div class="link-title">ylxredbag's blog</div>
-            <div class="link-intro">blog</div>
+            <div class="link-intro">我的一位老师的博客</div>
           </div>
         </div>
       </a>
@@ -258,13 +258,13 @@
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="zhoukangyang&#39;s blog"
+              <img src="https://cdn.luogu.com.cn/upload/usericon/173660.png" srcset="/img/loading.gif" lazyload alt="zhoukangyang&#39;s blog"
                    onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
             <div class="link-title">zhoukangyang's blog</div>
-            <div class="link-intro">blog</div>
+            <div class="link-intro">一个世界冠军的博客</div>
           </div>
         </div>
       </a>
@@ -276,13 +276,13 @@
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="johnCh&#39;s blog"
+              <img src="https://johnch.pages.dev/favicon.ico" srcset="/img/loading.gif" lazyload alt="johnCh&#39;s blog"
                    onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
             <div class="link-title">johnCh's blog</div>
-            <div class="link-intro">blog</div>
+            <div class="link-intro">johnCh 的博客</div>
           </div>
         </div>
       </a>
@@ -294,13 +294,49 @@
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Moya_Rao&#39;s blog"
+              <img src="https://cdn.luogu.com.cn/upload/usericon/814130.png" srcset="/img/loading.gif" lazyload alt="Moya_Rao&#39;s blog"
                    onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
             <div class="link-title">Moya_Rao's blog</div>
-            <div class="link-intro">blog</div>
+            <div class="link-intro">Moya_Rao 的博客</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+    
+    <div class="card col-lg-4 col-md-6 col-sm-12">
+      <a href="https://blog.tsumugi.icu/" class="card-body hover-with-bg" target="_blank" rel="noopener">
+        <div class="card-content">
+          
+            <div class="link-avatar my-auto">
+              <img src="https://blog.tsumugi.icu/img/logo.jpg" srcset="/img/loading.gif" lazyload alt="House Tsumugi"
+                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
+            </div>
+          
+          <div class="link-text">
+            <div class="link-title">House Tsumugi</div>
+            <div class="link-intro">Tsumugi 的博客</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+    
+    <div class="card col-lg-4 col-md-6 col-sm-12">
+      <a href="https://ljwcode.top/" class="card-body hover-with-bg" target="_blank" rel="noopener">
+        <div class="card-content">
+          
+            <div class="link-avatar my-auto">
+              <img src="https://ljwcode.top/image/favicon.ico" srcset="/img/loading.gif" lazyload alt="ljw 代码站"
+                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
+            </div>
+          
+          <div class="link-text">
+            <div class="link-title">ljw 代码站</div>
+            <div class="link-intro">一个 OIer 专属的代码平台</div>
           </div>
         </div>
       </a>
@@ -353,7 +389,37 @@
   </main>
 
   <footer>
-    <div class="footer-inner">
+    <div class="footer-inner"><div>
+  <span id="timeDate">正在载入天数...</span>
+  <span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+  function createtime(){
+      var grt= new Date("05/31/2025 17:30:00");
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "🚀已持续航行&nbsp"+dnum+"&nbsp天";  
+      document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+  }
+  setInterval("createtime()",250);
+  </script>
+</div>
   
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
@@ -426,5 +492,7 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-</body>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script>
+  <link defer rel="stylesheet" href="/css/backgroundize.css" />
+  <!-- hexo injector body_end end --></body>
 </html>
