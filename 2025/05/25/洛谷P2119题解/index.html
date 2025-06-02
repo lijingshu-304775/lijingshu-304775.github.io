@@ -19,12 +19,12 @@
   <meta name="author" content="lijingshu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：  四个物品的魔法值严格递增：Xa &lt; Xb &lt; Xc &lt; Xd。 Xb − Xa &#x3D; 2 × (Xd − Xc)。 Xb − Xa &lt; (Xc − Xb)&#x2F;3。  首先统计每个魔法">
+    <meta name="description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：   四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。   $X_b - X_a &#x3D; 2 \times (X_d - X_c)$。   $X_b - X_a &lt; (X_c -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="洛谷P2119题解">
 <meta property="og:url" content="https://lijingshu-304775.github.io/2025/05/25/%E6%B4%9B%E8%B0%B7P2119%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="lijingshu&#39;s blog">
-<meta property="og:description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：  四个物品的魔法值严格递增：Xa &lt; Xb &lt; Xc &lt; Xd。 Xb − Xa &#x3D; 2 × (Xd − Xc)。 Xb − Xa &lt; (Xc − Xb)&#x2F;3。  首先统计每个魔法">
+<meta property="og:description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：   四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。   $X_b - X_a &#x3D; 2 \times (X_d - X_c)$。   $X_b - X_a &lt; (X_c -">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-25T05:15:34.000Z">
 <meta property="article:modified_time" content="2025-05-31T03:37:18.461Z">
@@ -239,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          505 字
+          506 字
         
       </span>
     
@@ -292,37 +292,30 @@
             
               <div class="markdown-body">
                 
-                <p>原题链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2119"
-class="uri">https://www.luogu.com.cn/problem/P2119</a>。</p>
+                <p>原题链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2119">https://www.luogu.com.cn/problem/P2119</a>。</p>
 <h2 id="分析">分析</h2>
 <p>这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。</p>
 <p>魔法阵具体条件是：</p>
-<ol type="1">
-<li><p>四个物品的魔法值严格递增：<span
-class="math inline"><em>X</em><sub><em>a</em></sub> &lt; <em>X</em><sub><em>b</em></sub> &lt; <em>X</em><sub><em>c</em></sub> &lt; <em>X</em><sub><em>d</em></sub></span>。</p></li>
-<li><p><span
-class="math inline"><em>X</em><sub><em>b</em></sub> − <em>X</em><sub><em>a</em></sub> = 2 × (<em>X</em><sub><em>d</em></sub> − <em>X</em><sub><em>c</em></sub>)</span>。</p></li>
-<li><p><span
-class="math inline"><em>X</em><sub><em>b</em></sub> − <em>X</em><sub><em>a</em></sub> &lt; (<em>X</em><sub><em>c</em></sub> − <em>X</em><sub><em>b</em></sub>)/3</span>。</p></li>
+<ol>
+<li>
+<p>四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。</p>
+</li>
+<li>
+<p>$X_b - X_a = 2 \times (X_d - X_c)$。</p>
+</li>
+<li>
+<p>$X_b - X_a &lt; (X_c - X_b) / 3$。</p>
+</li>
 </ol>
 <p>首先统计每个魔法值出现的次数，这样可以方便后续的计算。</p>
-<p>再遍历可能的 <span
-class="math inline"><em>t</em></span>：对于每个可能的 <span
-class="math inline"><em>t</em></span>，使得 <span
-class="math inline">9 × <em>t</em> &lt; <em>n</em> − 1</span>。这个
-<span class="math inline"><em>t</em></span>
-是一个关键参数，用于确定四元组的范围。</p>
-<p>然后遍历可能的 <span class="math inline"><em>a</em></span>：对于每个
-<span class="math inline"><em>a</em></span>，使得 <span
-class="math inline"><em>a</em> × 9 × <em>t</em> + 1 &lt; <em>n</em></span>。这个
-<span class="math inline"><em>a</em></span> 是四元组中的最小值。</p>
+<p>再遍历可能的 $t$：对于每个可能的 $t$，使得 $9\times t &lt; n - 1$。这个 $t$ 是一个关键参数，用于确定四元组的范围。</p>
+<p>然后遍历可能的 $a$：对于每个 $a$，使得 $a \times 9 \times t + 1 &lt; n$。这个 $a$ 是四元组中的最小值。</p>
 <p>最后统计满足条件的四元组，在内层循环中，统计满足条件的四元组数量，并更新答案数组。</p>
 <p>用这样的思路，这道题写代码就非常简单了。</p>
 <p>下面是按照上面的步骤写出的代码。</p>
-<h2 id="ac-代码">AC 代码</h2>
+<h2 id="AC-代码">AC 代码</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> n, m, cnt[<span class="hljs-number">16000</span>], x[<span class="hljs-number">41000</span>], ans[<span class="hljs-number">40000</span>][<span class="hljs-number">5</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	cin &gt;&gt; n &gt;&gt; m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= m;i++)&#123;<br>		cin &gt;&gt; x[i];<br>		cnt[x[i]]++; <span class="hljs-comment">// 统计每个魔法值出现的次数</span><br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> t = <span class="hljs-number">1</span>;<span class="hljs-number">9</span> * t &lt;= n;t++)&#123; <span class="hljs-comment">// 遍历可能的 t</span><br>		<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>, a, b, c, d;<br>		<span class="hljs-keyword">for</span>(a = n - <span class="hljs-number">9</span> * t - <span class="hljs-number">1</span>;a &gt; <span class="hljs-number">0</span>;a--)&#123; <span class="hljs-comment">// 遍历可能的 a</span><br>			b = a + <span class="hljs-number">2</span> * t; <span class="hljs-comment">// 计算对应的 b</span><br>			c = a + <span class="hljs-number">8</span> * t + <span class="hljs-number">1</span>; <span class="hljs-comment">// 计算对应的 c</span><br>			d = a + <span class="hljs-number">9</span> * t + <span class="hljs-number">1</span>; <span class="hljs-comment">// 计算对应的 d</span><br>			res += cnt[c] * cnt[d]; <span class="hljs-comment">// 统计满足条件的四元组数量</span><br>			ans[a][<span class="hljs-number">0</span>] += cnt[b] * res; <span class="hljs-comment">// 更新答案</span><br>			ans[b][<span class="hljs-number">1</span>] += cnt[a] * res; <span class="hljs-comment">// 更新答案</span><br>		&#125;<br>		res = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(d = <span class="hljs-number">9</span> * t + <span class="hljs-number">2</span>;d &lt;= n;d++)&#123; <span class="hljs-comment">// 第二次操作，同上</span><br>			a = d - <span class="hljs-number">9</span> * t - <span class="hljs-number">1</span>; <br>			b = d - <span class="hljs-number">7</span> * t - <span class="hljs-number">1</span>;<br>			c = d - t;<br>			res += cnt[a] * cnt[b];<br>			ans[c][<span class="hljs-number">2</span>] += cnt[d] * res;<br>			ans[d][<span class="hljs-number">3</span>] += cnt[c] * res;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= m;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			cout &lt;&lt; ans[x[i]][j] &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span>;<br>		&#125;<br>		cout &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>AC 记录：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/218437099"
-class="uri">https://www.luogu.com.cn/record/218437099</a>。</p>
+<p>AC 记录：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/218437099">https://www.luogu.com.cn/record/218437099</a>。</p>
 
                 
               </div>
