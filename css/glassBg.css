@@ -1,0 +1,14 @@
+/* ���ĵ�ҳë����Ч�� */
+#board {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+/* ���Ŀ¼ë����Ч�� */
+#toc {
+  padding: 10px;
+  top: 4rem;
+  background-color: var(--board-bg-color);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(var(--background-blur));
+  backdrop-filter: blur(var(--background-blur));
+}

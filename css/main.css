@@ -465,6 +465,32 @@ sup > a::before,
     font-size: 1.35rem;
   }
 }
+.navbar-title {
+  outline: none;
+  --c: #20b2aa;
+  text-shadow: 0 0 10px var(--c), 0 0 20px var(--c), 0 0 40px var(--c), 0 0 80px var(--c), 0 0 160px var(--c);
+  animation: animate 5s linear infinite;
+}
+@-moz-keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@-o-keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
 .modal-dialog .modal-content {
   background-color: var(--board-bg-color);
   border: 0;
@@ -836,7 +862,7 @@ i.iconfont {
 :root {
   --color-mode: "light";
   --body-bg-color: #eee;
-  --board-bg-color: #fff;
+  --board-bg-color: #ffffff80;
   --text-color: #3c4858;
   --sec-text-color: #718096;
   --post-text-color: #2c3e50;
@@ -863,7 +889,7 @@ i.iconfont {
   }
   :root:not([data-user-color-scheme]) {
     --body-bg-color: #181c27;
-    --board-bg-color: #252d38;
+    --board-bg-color: #00000080;
     --text-color: #c4c6c9;
     --sec-text-color: #a7a9ad;
     --post-text-color: #c4c6c9;
@@ -901,7 +927,7 @@ i.iconfont {
 @media not print {
   [data-user-color-scheme="dark"] {
     --body-bg-color: #181c27;
-    --board-bg-color: #252d38;
+    --board-bg-color: #00000080;
     --text-color: #c4c6c9;
     --sec-text-color: #a7a9ad;
     --post-text-color: #c4c6c9;

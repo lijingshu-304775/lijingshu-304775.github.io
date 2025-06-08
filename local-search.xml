@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>继续浏览 Greasy Fork 的方法</title>
+    <link href="/2025/06/08/%E7%BB%A7%E7%BB%AD%E6%B5%8F%E8%A7%88-Greasy-Fork-%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <url>/2025/06/08/%E7%BB%A7%E7%BB%AD%E6%B5%8F%E8%A7%88-Greasy-Fork-%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：</p><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/4um55sx1.png" alt=""></p><hr><p>使用镜像，常用镜像有：</p><ol><li><p><a href="https://greasyfork.cc">https://greasyfork.cc</a>。</p></li><li><p><a href="https://gf.qytechs.cn">https://gf.qytechs.cn</a>。</p></li><li><p><a href="https://greasyfork.cloud">https://greasyfork.cloud</a>。</p></li></ol><p>如要使用，直接把 <a href="http://greasyfork.org">greasyfork.org</a> 改为上面的镜像即可。</p><h2 id="推荐阅读">推荐阅读</h2><p>推荐链接 1：<a href="https://www.luogu.com.cn/article/fg0zfzpy">Luogu 优化插件</a>。</p><p>推荐链接 2：<a href="https://www.luogu.com.cn/article/p2ri0gub">油猴插件 LG &amp; AT &amp; CF</a>。</p><p>推荐链接 3：<a href="https://www.luogu.com.cn/article/dqyc4vbg">分享一些神奇的好用的拓展&amp;脚本【精选版】</a>。</p><p>推荐链接 4：<a href="https://www.luogu.com.cn/article/lj91a3c8">Tampermonkey 优化插件</a>。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>科技·工程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网络</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>洛谷P2119题解</title>
     <link href="/2025/05/25/%E6%B4%9B%E8%B0%B7P2119%E9%A2%98%E8%A7%A3/"/>
     <url>/2025/05/25/%E6%B4%9B%E8%B0%B7P2119%E9%A2%98%E8%A7%A3/</url>
@@ -98,31 +123,6 @@
     <tags>
       
       <tag>VScode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>继续浏览 Greasy Fork 的方法</title>
-    <link href="/2025/05/01/%E7%BB%A7%E7%BB%AD%E6%B5%8F%E8%A7%88-Greasy-Fork-%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <url>/2025/05/01/%E7%BB%A7%E7%BB%AD%E6%B5%8F%E8%A7%88-Greasy-Fork-%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    
-    <content type="html"><![CDATA[<p>众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：</p><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/4um55sx1.png" alt=""></p><hr><h2 id="方法一">方法一</h2><h3 id="操作">操作</h3><p>如果你是 edge 浏览器，那么你把 <a href="edge://settings/privacy">edge://settings/privacy</a> <strong>拖到网址栏上去，而不是直接点击</strong>。</p><p>如果你是其他浏览器，请自行查找资料来完成下面的步骤，这里以 edge 为例：</p><p>下滑有一个 <code>使用安全的 DNS 指定如何查找网站的网络地址</code> 把它选上，再点击 <code>请选择服务提供商</code> ，在下面选择 <code>Cloudflare(1.1.1.1)</code>,如下图所示：</p><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/cfv32wpc.png" alt=""></p><p>这时你可能还要<strong>重启浏览器</strong>。</p><h3 id="测试">测试</h3><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/ivgsxljv.png" alt=""></p><p>成功！现在你就能在 Greasy Fork 上下载各种各样的脚本了。</p><h2 id="方法二">方法二</h2><p>使用镜像，常用镜像有：</p><ol><li><p><a href="https://greasyfork.cc">https://greasyfork.cc</a>。</p></li><li><p><a href="https://gf.qytechs.cn">https://gf.qytechs.cn</a>。</p></li><li><p><a href="https://greasyfork.cloud">https://greasyfork.cloud</a>。</p></li></ol><p>如要使用，直接把 <a href="http://greasyfork.org">greasyfork.org</a> 改为上面的镜像即可。</p><h2 id="方法三">方法三</h2><p>使用 watt toolkit，这个直接在微软商店搜索并下载即可。</p><p>下载好了以后打开它点到左边的网络加速把 GitHub 勾上即可。</p><h2 id="题外话">题外话</h2><p>推荐链接 1：<a href="https://www.luogu.com.cn/article/fg0zfzpy">Luogu 优化插件</a>。</p><p>推荐链接 2：<a href="https://www.luogu.com.cn/article/p2ri0gub">油猴插件 LG &amp; AT &amp; CF</a>。</p><p>推荐链接 3：<a href="https://www.luogu.com.cn/article/dqyc4vbg">分享一些神奇的好用的拓展&amp;脚本【精选版】</a>。</p><p>推荐链接 4：<a href="https://www.luogu.com.cn/article/lj91a3c8">Tampermonkey 优化插件</a>。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>科技·工程</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>网络</tag>
       
     </tags>
     
