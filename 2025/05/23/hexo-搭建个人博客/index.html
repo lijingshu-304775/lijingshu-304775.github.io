@@ -27,7 +27,7 @@
 <meta property="og:description" content="基本环境准备  Git 安装地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloads,选择你合适的系统安装即可。 Nodejs 安装地址：https:&#x2F;&#x2F;nodejs.org。  有一点要注意的是 Git 安装时如果不知道每一步是什么意思，最好不要改默认设置，一定要添加到 Path，nodejs 也是要添加到 Path。  在 GitHub 上注册一个账号，会点英语的人">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-23T10:30:59.000Z">
-<meta property="article:modified_time" content="2025-05-25T05:33:41.802Z">
+<meta property="article:modified_time" content="2025-06-14T05:24:22.209Z">
 <meta property="article:author" content="lijingshu">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          866 字
+          908 字
         
       </span>
     
@@ -360,7 +360,7 @@ language，中文 <code>zh-CN</code>，英文<code>en</code>。</p>
 src="https://cdn.luogu.com.cn/upload/image_hosting/vxjvllfu.png" srcset="/img/loading.gif" lazyload /></p>
 <p><img
 src="https://cdn.luogu.com.cn/upload/image_hosting/6577iv86.png" srcset="/img/loading.gif" lazyload /></p>
-<h2 id="配置ssh-key">配置SSH Key</h2>
+<h2 id="配置-ssh-key">配置 SSH Key</h2>
 <p>为了避免每次上传都要输入用户名和密码，我们将使用 SSH 免密登录。</p>
 <p>鼠标右击打开 <code>Git Bash</code>。</p>
 <p><img
@@ -384,6 +384,11 @@ src="https://cdn.luogu.com.cn/upload/image_hosting/f66sjhrb.png" srcset="/img/lo
 src="https://cdn.luogu.com.cn/upload/image_hosting/ehmfgls3.png" srcset="/img/loading.gif" lazyload /></p>
 <p>标题随意填，将刚复制的 <code>id_rsa.pub</code> 密钥粘贴到 Key中，最后
 Add SSH key。</p>
+<h2 id="配置评论">配置评论</h2>
+<p>我推荐使用 Gisgus。</p>
+<p>可以参考这里 <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_41212418/article/details/137819858"
+class="uri">https://blog.csdn.net/sinat_41212418/article/details/137819858</a>。</p>
 <h2 id="连接-hexo-与-github">连接 Hexo 与 GitHub</h2>
 <p>获取 ssh 地址：</p>
 <p><img
@@ -398,14 +403,16 @@ src="https://cdn.luogu.com.cn/upload/image_hosting/s2dz53wx.png" srcset="/img/lo
 <p>这时再输入以下命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cmd">hexo clean<br>hexo g<br>hexo d //部署到服务上<br></code></pre></td></tr></table></figure>
 <p>将代码推送到 git 上，再然后<strong>过几分钟</strong>访问<a
-target="_blank" rel="noopener" href="https://github.com/xxx/xxx.github.io"
-class="uri">https://github.com/xxx/xxx.github.io</a>，就能看到部署好的主题页面了，大功告成！</p>
+target="_blank" rel="noopener" href="https://xxx.github.io/"
+class="uri">https://xxx.github.io/</a>，就能看到部署好的主题页面了，大功告成！</p>
 <h2 id="发布文章">发布文章</h2>
 <p>在 Blog 中打开终端命令行输入：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">hexo new &quot;你的文章标题名&quot;<br></code></pre></td></tr></table></figure>
 <p>接着在 <code>\Blog\source\_posts</code> 文件夹中就能看到新建的
 markdown 文件，编辑好后重新执行 <code>hexo clean</code>
 <code>hexo g</code> <code>hexo d</code> 命令就 ok 了。</p>
+<h2 id="ad">AD</h2>
+<p>要找我交换友链的在友链页的下方留言版留言。</p>
 
                 
               </div>
