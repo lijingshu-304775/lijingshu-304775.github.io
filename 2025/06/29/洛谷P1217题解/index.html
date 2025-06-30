@@ -5,7 +5,7 @@
 
 
 
-<head><!-- hexo injector head_begin start --><progress id="content_progress" value="0"></progress><!-- hexo injector head_begin end -->
+<head>
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
@@ -19,12 +19,12 @@
   <meta name="author" content="lijingshu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。   判断质数。   判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i &#x3D; 2">
+    <meta name="description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。   判断质数。   判断回文数。   判断质数的代码很简单，从 222 枚举到 n\sqrt nn​，判断每一个 iii 是否能被 nnn 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i &#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="洛谷P1217题解">
 <meta property="og:url" content="https://lijingshu-304775.github.io/2025/06/29/%E6%B4%9B%E8%B0%B7P1217%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="lijingshu&#39;s blog">
-<meta property="og:description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。   判断质数。   判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i &#x3D; 2">
+<meta property="og:description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。   判断质数。   判断回文数。   判断质数的代码很简单，从 222 枚举到 n\sqrt nn​，判断每一个 iii 是否能被 nnn 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i &#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-29T09:10:42.000Z">
 <meta property="article:modified_time" content="2025-06-29T09:12:43.541Z">
@@ -70,9 +70,10 @@
 
   
 <link rel="stylesheet" href="/css/macpanel.css">
+<link rel="stylesheet" href="/css/cloudedGlass.css">
 <link rel="stylesheet" href="/css/links.css">
-<link rel="stylesheet" href="/css/read-progress-bar.css">
 <link rel="stylesheet" href="/css/scrollAnimation.css">
+<link rel="stylesheet" href="/css/selection.css">
 
 
 
@@ -92,7 +93,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
@@ -159,9 +164,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
               </a>
             </li>
           
@@ -171,9 +176,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
               </a>
             </li>
           
@@ -242,7 +247,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          253 字
+          249 字
         
       </span>
     
@@ -304,11 +309,22 @@
 <p>判断回文数。</p>
 </li>
 </ol>
-<p>判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。</p>
+<p>判断质数的代码很简单，从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 枚举到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="padding-left:0.833em;">n</span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span>，判断每一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 是否能被 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 整除，如可以返回一，否则返回零，可以得到如下代码。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isprime</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(n &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>;i * i &lt;= n;i++)&#123;<br>        <span class="hljs-keyword">if</span>(x % i == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>判断回文数的代码也很简单，你可以用 to_string 函数将整数 $n$ 转成字符串，用一个字符串存下来。让后可以使用 reverse 函数反转字符串，最后判断两个字符串是否相等就可以了。</p>
+<p>判断回文数的代码也很简单，你可以用 to_string 函数将整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 转成字符串，用一个字符串存下来。让后可以使用 reverse 函数反转字符串，最后判断两个字符串是否相等就可以了。</p>
 <p>注意，在这里需要引用 cstring 头文件。</p>
-<p>最后的最后我们还需一个 for 循环枚举 $a$ 和 $b$ 之间的所有整数，依次判断是否是回文质数，满足条件就输出。</p>
+<p>最后的最后我们还需一个 for 循环枚举 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 之间的所有整数，依次判断是否是回文质数，满足条件就输出。</p>
 <p>完整代码就不给了。希望这篇题解对你有所帮助。</p>
 
                 
@@ -416,50 +432,6 @@
             </div>
 
             
-  
-  
-    <article id="comments" lazyload>
-      
-    <div id="giscus" class="giscus"></div>
-    <script type="text/javascript">
-      Fluid.utils.loadComments('#giscus', function() {
-        var options = {"repo":"lijingshu-304775/Giscus-demo","repo-id":"R_kgDOO3HAPw","category":"Announcements","category-id":"DIC_kwDOO3HAP84CrG1V","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
-        var attributes = {};
-        for (let option in options) {
-          if (!option.startsWith('theme-')) {
-            var key = option.startsWith('data-') ? option : 'data-' + option;
-            attributes[key] = options[option];
-          }
-        }
-        var light = 'light';
-        var dark = 'dark';
-        window.GiscusThemeLight = light;
-        window.GiscusThemeDark = dark;
-        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
-        for (let attribute in attributes) {
-          var value = attributes[attribute];
-          if (value === undefined || value === null || value === '') {
-            delete attributes[attribute];
-          }
-        }
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://giscus.app/client.js');
-        s.setAttribute('crossorigin', 'anonymous');
-        for (let attribute in attributes) {
-          s.setAttribute(attribute, attributes[attribute]);
-        }
-        var ss = document.getElementsByTagName('script');
-        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
-        e.parentNode.insertBefore(s, e.nextSibling);
-      });
-    </script>
-    <noscript>Please enable JavaScript to view the comments</noscript>
-
-
-    </article>
-  
-
-
           </article>
         </div>
       </div>
@@ -555,7 +527,7 @@
   </main>
 
   <footer>
-    </div>
+    <div class="footer-inner">
   
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
@@ -564,6 +536,7 @@
   
   
 </div>
+
   </footer>
 
   <!-- Scripts -->
@@ -753,8 +726,6 @@
 
 
   
-<script src="/js/read-progress-bar.js"></script>
-<script src="/js/diy/yinghua.js"></script>
 <script src="/js/scrollAnimation.js"></script>
 
 
@@ -770,8 +741,5 @@
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
   <script async src="/js/fireworks.js"></script>
-</script>
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script>
-  <link defer rel="stylesheet" href="/css/backgroundize.css" />
-  <!-- hexo injector body_end end --></body>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
 </html>

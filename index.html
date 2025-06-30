@@ -59,9 +59,10 @@
 
   
 <link rel="stylesheet" href="/css/macpanel.css">
+<link rel="stylesheet" href="/css/cloudedGlass.css">
 <link rel="stylesheet" href="/css/links.css">
-<link rel="stylesheet" href="/css/read-progress-bar.css">
 <link rel="stylesheet" href="/css/scrollAnimation.css">
+<link rel="stylesheet" href="/css/selection.css">
 
 
 
@@ -81,7 +82,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
@@ -148,9 +153,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
               </a>
             </li>
           
@@ -160,9 +165,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
               </a>
             </li>
           
@@ -254,7 +259,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/06/29/%E6%B4%9B%E8%B0%B7P1217%E9%A2%98%E8%A7%A3/" target="_self">
         <div>
-          这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。   判断质数。   判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i = 2
+          这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。   判断质数。   判断回文数。   判断质数的代码很简单，从 222 枚举到 n\sqrt nn​，判断每一个 iii 是否能被 nnn 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i =
         </div>
       </a>
 
@@ -315,7 +320,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/06/08/%E7%BB%A7%E7%BB%AD%E6%B5%8F%E8%A7%88-Greasy-Fork-%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
         <div>
-          众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：   解决问题的办法 使用镜像，常用镜像有：   https://greasyfork.cc。   https://gf.qytechs.cn。   https://greasyfork.cloud。   如要使用，直接把 greasyfork.org 改为上面的镜像即可。 注意：这些镜像站随时失效，如失效可以考虑使用 脚
+          众所周知，Greasy Fork 是强大的油猴脚本库，而现在已经变成了这样：    解决问题的办法 使用镜像，常用镜像有：   https://greasyfork.cc。   https://gf.qytechs.cn。   https://greasyfork.cloud。   如要使用，直接把 greasyfork.org 改为上面的镜像即可。 注意：这些镜像站随时失效，如失效可以考虑使用
         </div>
       </a>
 
@@ -376,7 +381,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/05/25/%E6%B4%9B%E8%B0%B7P2119%E9%A2%98%E8%A7%A3/" target="_self">
         <div>
-          原题链接：https://www.luogu.com.cn/problem/P2119。 分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：   四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。   $X_b - X_a = 2 \times (X_d - X_c)$。   $X_b - X_a &lt; (X_c -
+          原题链接：https://www.luogu.com.cn/problem/P2119。  分析 这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：   四个物品的魔法值严格递增：Xa&lt;Xb&lt;Xc&lt;XdX_a &lt; X_b &lt; X_c &lt; X_dXa​&lt;Xb​&lt;Xc​&lt;Xd​。   Xb−Xa=2×(Xd−Xc)X_
         </div>
       </a>
 
@@ -437,7 +442,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/05/23/hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_self">
         <div>
-          基本环境准备   Git 安装地址：https://git-scm.com/downloads,选择你合适的系统安装即可。   Nodejs 安装地址：https://nodejs.org。   有一点要注意的是 Git 安装时如果不知道每一步是什么意思，最好不要改默认设置，一定要添加到 Path，nodejs 也是要添加到 Path。  在 GitHub 上注册一个账号，会点英语的人应该都会，这
+          基本环境准备   Git 安装地址：https://git-scm.com/downloads,选择你合适的系统安装即可。   Nodejs 安装地址：https://nodejs.org。   有一点要注意的是 Git 安装时如果不知道每一步是什么意思，最好不要改默认设置，一定要添加到 Path，nodejs 也是要添加到 Path。  在 GitHub 上注册一个账号，会点英语的人应该都会，
         </div>
       </a>
 
@@ -498,7 +503,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/05/03/VScode%E9%85%8D%E7%BD%AEC-C-%E7%8E%AF%E5%A2%83/" target="_self">
         <div>
-          众所周知，VScode 是一款非常强大的代码/文本编辑器。至于它为什么强大请看下图。  卸载 vscode（第一次安装的请跳过） 注意：网上有些配置教程是错误的，如果你配错了，那么请你按以下步骤彻底卸载。  第一步找到 vscode 安装路径，双击运行 unins000.exe 卸载 vscode。    来到 C:\Users\admin\AppData\Roaming 其中 admin 是你系
+          众所周知，VScode 是一款非常强大的代码/文本编辑器。至于它为什么强大请看下图。   卸载 vscode（第一次安装的请跳过） 注意：网上有些配置教程是错误的，如果你配错了，那么请你按以下步骤彻底卸载。  第一步找到 vscode 安装路径，双击运行 unins000.exe 卸载 vscode。    来到 C:\Users\admin\AppData\Roaming 其中 admin 是你
         </div>
       </a>
 
@@ -559,7 +564,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/05/01/%E6%B4%9B%E8%B0%B7P5662%E9%A2%98%E8%A7%A3/" target="_self">
         <div>
-          原题链接：https://www.luogu.com.cn/problem/P5662。 更好的使用方式：https://www.luogu.com.cn/article/sxhfnpo8。 警告：严禁抄袭。  分析 这道题已知 $N$ 件物品未来 $T$ 天的价格，需要通过交易来让手中的 $M$ 没金币尽可能变多，并且交易不限次数且没有手续费。 先看数据范围： 对于 $T = 1$ 的 $10$
+          原题链接：https://www.luogu.com.cn/problem/P5662。 更好的使用方式：https://www.luogu.com.cn/article/sxhfnpo8。 警告：严禁抄袭。   分析 这道题已知 NNN 件物品未来 TTT 天的价格，需要通过交易来让手中的 MMM 没金币尽可能变多，并且交易不限次数且没有手续费。 先看数据范围： 对于 T=1T = 1T=1 的
         </div>
       </a>
 
@@ -622,7 +627,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/05/01/%E6%B4%9B%E8%B0%B7P5663%E9%A2%98%E8%A7%A3/" target="_self">
         <div>
-          原题链接：https://www.luogu.com.cn/problem/P5663。 更好的使用方式：https://www.luogu.com.cn/article/0o6pvn64。 警告：严禁抄袭。 分析 此题是一道图论的题目，可以将每个工人看成一个点，将双向的零件传送带看作无向边。 只管的做法是按照题目的描述规则，使用递归直接模拟，这样可以通过前 $8$ 个测试点，得到 $40$ 分。
+          原题链接：https://www.luogu.com.cn/problem/P5663。 更好的使用方式：https://www.luogu.com.cn/article/0o6pvn64。 警告：严禁抄袭。  分析 此题是一道图论的题目，可以将每个工人看成一个点，将双向的零件传送带看作无向边。 只管的做法是按照题目的描述规则，使用递归直接模拟，这样可以通过前 888 个测试点，得到 404040
         </div>
       </a>
 
@@ -716,7 +721,7 @@
   </main>
 
   <footer>
-    </div>
+    <div class="footer-inner">
   
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
@@ -725,6 +730,7 @@
   
   
 </div>
+
   </footer>
 
   <!-- Scripts -->
@@ -778,8 +784,6 @@
 
 
   
-<script src="/js/read-progress-bar.js"></script>
-<script src="/js/diy/yinghua.js"></script>
 <script src="/js/scrollAnimation.js"></script>
 
 
@@ -795,8 +799,5 @@
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
   <script async src="/js/fireworks.js"></script>
-</script>
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script>
-  <link defer rel="stylesheet" href="/css/backgroundize.css" />
-  <!-- hexo injector body_end end --></body>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
 </html>
