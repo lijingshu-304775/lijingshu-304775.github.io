@@ -323,7 +323,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/07/05/%E6%B4%9B%E8%B0%B7P8687%E9%A2%98%E8%A7%A3/" target="_self">
         <div>
-          本题考虑使用状压 DP。 因为 $M$ 的最大值为 $20$，可以使用二进制来表示某一报的糖口味的集合以及小明想要平常的糖果口味集合。也就是说，每一种口味对应二进制位中的一位，集合中的某个口味存在则对应的位为 $1$，否则为 $0$。 于是我们设 $f_j$ 表示达到口味集合 $j$ 所需的最少糖果包数。初始化时，$f_0 &#x3D; 0$，其他状态初始化为一个较⼤的值。 遍历每一包糖果，对每一
+          本题考虑使用状压 DP。 设糖果口味总数为 $m$，使用二进制数 $s \in {0, 1}^m$ 表示口味集合，其中第 $k$ 位为 $1$ 当且仅当该集合包含第 $k$ 种口味。 定义状态 $f(s)$ 为覆盖口味集合 $s$ 所需的最小糖果包数。初始条件为：  $f(\emptyset) &#x3D; 0$（空集不需要任何糖果包）  $f(s) &#x3D; +\infty$（对于所有非空集
         </div>
       </a>
 
@@ -364,9 +364,9 @@
             
               <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">#位运算</a>
             
-              <a href="/tags/DP/">#DP</a>
-            
               <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">#蓝桥杯</a>
+            
+              <a href="/tags/DP/">#DP</a>
             
           </div>
         
@@ -388,7 +388,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/07/03/%E6%B4%9B%E8%B0%B7P12972%E9%A2%98%E8%A7%A3/" target="_self">
         <div>
-          题目链接：https://www.luogu.com.cn/problem/P12972。  如果这道题你去看简易题面，你成功的被套进去了。 我们化简精力计算公式，可以得到： $$(k \operatorname{and} a_j)+(k \oplus a_j)−k&#x3D;a_j$$ 因此，每轮的总精力消耗为该轮中所有饮料重量的按位或。 为了最小化总和，应让每轮的按位或尽可能小。 所以最终结论
+          题目链接：https://www.luogu.com.cn/problem/P12972。  如果这道题你去看简易题面，你成功的被套进去了。 我们化简精力计算公式，可以得到： $$(k \operatorname{and} a_j)+(k \operatorname{xor} a_j)−k&#x3D;a_j$$ 因此，每轮的总精力消耗为该轮中所有饮料重量的按位或。 为了最小化总和，应让每轮的按位或
         </div>
       </a>
 
