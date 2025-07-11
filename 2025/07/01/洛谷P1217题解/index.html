@@ -19,15 +19,15 @@
   <meta name="author" content="lijingshu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。  判断质数。  判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i &#x3D; 2;i">
+    <meta name="description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。  判断质数。  判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt x$，判断每一个 $i$ 是否能被 $x$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(x &lt; 2) return 0;    for(int i &#x3D; 2;i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="洛谷P1217题解">
 <meta property="og:url" content="https://lijingshu-304775.github.io/2025/07/01/%E6%B4%9B%E8%B0%B7P1217%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="lijingshu&#39;s blog">
-<meta property="og:description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。  判断质数。  判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(n &lt; 2) return 0;    for(int i &#x3D; 2;i">
+<meta property="og:description" content="这道题没什么思维难度，建议降红，本题目可以拆分成两个步骤。  判断质数。  判断回文数。   判断质数的代码很简单，从 $2$ 枚举到 $\sqrt x$，判断每一个 $i$ 是否能被 $x$ 整除，如可以返回一，否则返回零，可以得到如下代码。 1234567bool isprime(int x)&#123;    if(x &lt; 2) return 0;    for(int i &#x3D; 2;i">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-01T04:17:41.000Z">
-<meta property="article:modified_time" content="2025-07-03T05:29:16.287Z">
+<meta property="article:modified_time" content="2025-07-11T10:29:11.616Z">
 <meta property="article:author" content="lijingshu">
 <meta property="article:tag" content="USACO">
 <meta property="article:tag" content="素数筛">
@@ -165,18 +165,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
@@ -302,10 +290,10 @@
 <li><p>判断回文数。</p>
 </li>
 </ol>
-<p>判断质数的代码很简单，从 $2$ 枚举到 $\sqrt n$，判断每一个 $i$ 是否能被 $n$ 整除，如可以返回一，否则返回零，可以得到如下代码。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isprime</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(n &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>;i * i &lt;= n;i++)&#123;<br>        <span class="hljs-keyword">if</span>(x % i == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>判断质数的代码很简单，从 $2$ 枚举到 $\sqrt x$，判断每一个 $i$ 是否能被 $x$ 整除，如可以返回一，否则返回零，可以得到如下代码。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isprime</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>;i * i &lt;= x;i++)&#123;<br>        <span class="hljs-keyword">if</span>(x % i == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>判断回文数的代码也很简单，你可以用 to_string 函数将整数 $n$ 转成字符串，用一个字符串存下来。然后可以使用 reverse 函数反转字符串，最后判断两个字符串是否相等就可以了。</p>
+<p>判断回文数的代码也很简单，你可以用 to_string 函数将整数 $x$ 转成字符串，用一个字符串存下来。然后可以使用 reverse 函数反转字符串，最后判断两个字符串是否相等就可以了。</p>
 <p>注意，在这里需要引用 cstring 头文件。</p>
 <p>最后的最后我们还需一个 for 循环枚举 $a$ 和 $b$ 之间的所有整数，依次判断是否是回文质数，满足条件就输出。</p>
 <p>完整代码就不给了。希望这篇题解对你有所帮助。</p>

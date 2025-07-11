@@ -19,23 +19,21 @@
   <meta name="author" content="lijingshu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 分析这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：  四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。  $X_b - X_a &#x3D; 2 \times (X_d - X_c)$。  $X_b - X_a &lt; (X_c">
+    <meta name="description" content="分析题目大意：给定 $N$ 名学生的姓名和三门科目成绩，找出所有 “旗鼓相当的对手”，即两学生每科分数差不超过 $5$ 且总分差不超过 $10$。输出需按字典序排列所有符合条件的学生对。 这道题我们可以使用结构体存储学生信息（姓名、各科成绩、总分）。 然后遍历所有可能的学生对，检查每科分差和总分差是否符合要求，这里可以使用绝对值函数来取差。 最后将符合条件的学生对按字典序排序后输出。 代码1234">
 <meta property="og:type" content="article">
-<meta property="og:title" content="洛谷P2119题解">
-<meta property="og:url" content="https://lijingshu-304775.github.io/2025/07/01/%E6%B4%9B%E8%B0%B7P2119%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:title" content="洛谷P5741洛谷">
+<meta property="og:url" content="https://lijingshu-304775.github.io/2025/07/11/%E6%B4%9B%E8%B0%B7P5741%E6%B4%9B%E8%B0%B7/index.html">
 <meta property="og:site_name" content="lijingshu&#39;s blog">
-<meta property="og:description" content="原题链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P2119。 分析这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。 魔法阵具体条件是：  四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。  $X_b - X_a &#x3D; 2 \times (X_d - X_c)$。  $X_b - X_a &lt; (X_c">
+<meta property="og:description" content="分析题目大意：给定 $N$ 名学生的姓名和三门科目成绩，找出所有 “旗鼓相当的对手”，即两学生每科分数差不超过 $5$ 且总分差不超过 $10$。输出需按字典序排列所有符合条件的学生对。 这道题我们可以使用结构体存储学生信息（姓名、各科成绩、总分）。 然后遍历所有可能的学生对，检查每科分差和总分差是否符合要求，这里可以使用绝对值函数来取差。 最后将符合条件的学生对按字典序排序后输出。 代码1234">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-01T04:17:57.000Z">
-<meta property="article:modified_time" content="2025-07-03T05:28:43.447Z">
+<meta property="article:published_time" content="2025-07-11T10:26:58.000Z">
+<meta property="article:modified_time" content="2025-07-11T10:29:43.130Z">
 <meta property="article:author" content="lijingshu">
-<meta property="article:tag" content="NOIP普及组">
-<meta property="article:tag" content="枚举">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>洛谷P2119题解 - lijingshu&#39;s blog</title>
+  <title>洛谷P5741洛谷 - lijingshu&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="洛谷P2119题解"></span>
+            <span id="subtitle" data-typed-text="洛谷P5741洛谷"></span>
           
         </div>
 
@@ -218,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-01 12:17" pubdate>
-          2025年7月1日 中午
+        <time datetime="2025-07-11 18:26" pubdate>
+          2025年7月11日 晚上
         </time>
       </span>
     
@@ -230,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          508 字
+          456 字
         
       </span>
     
@@ -241,7 +239,7 @@
         
         
         
-          5 分钟
+          4 分钟
         
       </span>
     
@@ -278,32 +276,16 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">洛谷P2119题解</h1>
+            <h1 id="seo-header">洛谷P5741洛谷</h1>
             
             
               <div class="markdown-body">
                 
-                <p>原题链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2119">https://www.luogu.com.cn/problem/P2119</a>。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这道题目要求我们找到满足特定条件的四个魔法物品，称为魔法阵。</p>
-<p>魔法阵具体条件是：</p>
-<ol>
-<li><p>四个物品的魔法值严格递增：$X_a &lt; X_b &lt; X_c &lt; X_d$。</p>
-</li>
-<li><p>$X_b - X_a &#x3D; 2 \times (X_d - X_c)$。</p>
-</li>
-<li><p>$X_b - X_a &lt; (X_c - X_b) &#x2F; 3$。</p>
-</li>
-</ol>
-<p>首先统计每个魔法值出现的次数，这样可以方便后续的计算。</p>
-<p>再遍历可能的 $t$：对于每个可能的 $t$，使得 $9\times t &lt; n - 1$。这个 $t$ 是一个关键参数，用于确定四元组的范围。</p>
-<p>然后遍历可能的 $a$：对于每个 $a$，使得 $a \times 9 \times t + 1 &lt; n$。这个 $a$ 是四元组中的最小值。</p>
-<p>最后统计满足条件的四元组，在内层循环中，统计满足条件的四元组数量，并更新答案数组。</p>
-<p>用这样的思路，这道题写代码就非常简单了。</p>
-<p>下面是按照上面的步骤写出的代码。</p>
-<h2 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> n, m, cnt[<span class="hljs-number">16000</span>], x[<span class="hljs-number">41000</span>], ans[<span class="hljs-number">40000</span>][<span class="hljs-number">5</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	cin &gt;&gt; n &gt;&gt; m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= m;i++)&#123;<br>		cin &gt;&gt; x[i];<br>		cnt[x[i]]++; <span class="hljs-comment">// 统计每个魔法值出现的次数</span><br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> t = <span class="hljs-number">1</span>;<span class="hljs-number">9</span> * t &lt;= n;t++)&#123; <span class="hljs-comment">// 遍历可能的 t</span><br>		<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>, a, b, c, d;<br>		<span class="hljs-keyword">for</span>(a = n - <span class="hljs-number">9</span> * t - <span class="hljs-number">1</span>;a &gt; <span class="hljs-number">0</span>;a--)&#123; <span class="hljs-comment">// 遍历可能的 a</span><br>			b = a + <span class="hljs-number">2</span> * t; <span class="hljs-comment">// 计算对应的 b</span><br>			c = a + <span class="hljs-number">8</span> * t + <span class="hljs-number">1</span>; <span class="hljs-comment">// 计算对应的 c</span><br>			d = a + <span class="hljs-number">9</span> * t + <span class="hljs-number">1</span>; <span class="hljs-comment">// 计算对应的 d</span><br>			res += cnt[c] * cnt[d]; <span class="hljs-comment">// 统计满足条件的四元组数量</span><br>			ans[a][<span class="hljs-number">0</span>] += cnt[b] * res; <span class="hljs-comment">// 更新答案</span><br>			ans[b][<span class="hljs-number">1</span>] += cnt[a] * res; <span class="hljs-comment">// 更新答案</span><br>		&#125;<br>		res = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(d = <span class="hljs-number">9</span> * t + <span class="hljs-number">2</span>;d &lt;= n;d++)&#123; <span class="hljs-comment">// 第二次操作，同上</span><br>			a = d - <span class="hljs-number">9</span> * t - <span class="hljs-number">1</span>; <br>			b = d - <span class="hljs-number">7</span> * t - <span class="hljs-number">1</span>;<br>			c = d - t;<br>			res += cnt[a] * cnt[b];<br>			ans[c][<span class="hljs-number">2</span>] += cnt[d] * res;<br>			ans[d][<span class="hljs-number">3</span>] += cnt[c] * res;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= m;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			cout &lt;&lt; ans[x[i]][j] &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span>;<br>		&#125;<br>		cout &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>AC 记录：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/218437099">https://www.luogu.com.cn/record/218437099</a>。</p>
-
+                <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题目大意：给定 $N$ 名学生的姓名和三门科目成绩，找出所有 “旗鼓相当的对手”，即两学生每科分数差不超过 $5$ 且总分差不超过 $10$。输出需按字典序排列所有符合条件的学生对。</p>
+<p>这道题我们可以使用结构体存储学生信息（姓名、各科成绩、总分）。</p>
+<p>然后遍历所有可能的学生对，检查每科分差和总分差是否符合要求，这里可以使用绝对值函数来取差。</p>
+<p>最后将符合条件的学生对按字典序排序后输出。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node1</span> &#123;<span class="hljs-comment">//学生基本信息</span><br>	string name;<br>	<span class="hljs-type">int</span> c, m, e, sum;<br>	<span class="hljs-comment">//c:语文成绩</span><br>	<span class="hljs-comment">//m:数学成绩</span><br>	<span class="hljs-comment">//e:英语成绩</span><br>&#125;stu[<span class="hljs-number">1000</span>];<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node2</span> &#123;<span class="hljs-comment">//用两个字符串模拟字典序</span><br>	string a, b;<br>&#125;ans[<span class="hljs-number">500000</span>];<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp1</span><span class="hljs-params">(string x, string y)</span> </span>&#123;<span class="hljs-comment">//字典序比较</span><br>	<span class="hljs-keyword">return</span> x &lt; y;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp2</span><span class="hljs-params">(node2 x, node2 y)</span> </span>&#123;<span class="hljs-comment">//排序学生对</span><br>	<span class="hljs-keyword">if</span> (x.a != y.a) <span class="hljs-keyword">return</span> x.a &lt; y.a;<br>	<span class="hljs-keyword">return</span> x.b &lt; y.b;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-type">int</span> n;<br>	cin &gt;&gt; n;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>		cin &gt;&gt; stu[i].name &gt;&gt; stu[i].c &gt;&gt; stu[i].m &gt;&gt; stu[i].e;<br>		stu[i].sum = stu[i].c + stu[i].m + stu[i].e;<br>	&#125; <br>	<span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &lt; n; j++) &#123;<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(stu[i].c - stu[j].c) &lt;= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-built_in">abs</span>(stu[i].m - stu[j].m) &lt;= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-built_in">abs</span>(stu[i].e - stu[j].e) &lt;= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-built_in">abs</span>(stu[i].sum - stu[j].sum) &lt;= <span class="hljs-number">10</span>) &#123;<span class="hljs-comment">//abs是绝对值函数，会将参数取绝对值</span><br>				<span class="hljs-keyword">if</span> (<span class="hljs-built_in">cmp1</span>(stu[i].name, stu[j].name)) &#123;<br>					ans[cnt] = &#123;stu[i].name, stu[j].name&#125;;<br>				&#125; <span class="hljs-keyword">else</span> &#123;<br>					ans[cnt] = &#123;stu[j].name, stu[i].name&#125;;<br>				&#125;<br>				cnt++;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-built_in">sort</span>(ans, ans + cnt, cmp2);<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; cnt; i++) &#123;<br>		cout &lt;&lt; ans[i].a &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span> &lt;&lt; ans[i].b &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -333,15 +315,6 @@
     </div>
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/NOIP%E6%99%AE%E5%8F%8A%E7%BB%84/" class="print-no-link">#NOIP普及组</a>
-      
-        <a href="/tags/%E6%9E%9A%E4%B8%BE/" class="print-no-link">#枚举</a>
-      
-    </div>
-  
 </div>
 
 
@@ -350,8 +323,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>洛谷P2119题解</div>
-      <div>https://lijingshu-304775.github.io/2025/07/01/洛谷P2119题解/</div>
+      <div>洛谷P5741洛谷</div>
+      <div>https://lijingshu-304775.github.io/2025/07/11/洛谷P5741洛谷/</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +336,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月1日</div>
+          <div>2025年7月11日</div>
         </div>
       
       
@@ -395,18 +368,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/01/hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="hexo 搭建个人博客">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">hexo 搭建个人博客</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/01/%E6%B4%9B%E8%B0%B7P1217%E9%A2%98%E8%A7%A3/" title="洛谷P1217题解">
-                        <span class="hidden-mobile">洛谷P1217题解</span>
+                      <a href="/2025/07/08/%E6%B4%9B%E8%B0%B7P13013%E9%A2%98%E8%A7%A3/" title="洛谷P13013题解">
+                        <span class="hidden-mobile">洛谷P13013题解</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
