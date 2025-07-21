@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>洛谷P13190题解</title>
+    <link href="/2025/07/21/%E6%B4%9B%E8%B0%B7P13190%E9%A2%98%E8%A7%A3/"/>
+    <url>/2025/07/21/%E6%B4%9B%E8%B0%B7P13190%E9%A2%98%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<p>题目链接：<a href="https://www.luogu.com.cn/problem/P13190">https://www.luogu.com.cn/problem/P13190</a>。</p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题意：给定一个 $N \times N$ 的网格，每行和每列的士兵身高严格递增。现在丢失了一行或一列，剩下 $2 \times N-1$ 个列表。要求找出缺失的那一行或列。</p><p>首先我们可以统计所有数字的出现次数（每个数字在行列中出现的总次数应该是偶数，除非它属于缺失的那一行或一列）。</p><p>然后筛选奇数次出现的数字（缺失的行或列中的每个数字出现次数为奇数）。</p><p>最后排序输出（将这些数字排序后即为缺失的行或列）。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> cnt[<span class="hljs-number">2505</span>];<span class="hljs-comment">// 统计每个身高的出现次数</span><br><span class="hljs-type">int</span> m[<span class="hljs-number">55</span>];<span class="hljs-comment">// 存储缺失的行/列</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br><span class="hljs-type">int</span> t;<br>cin &gt;&gt; t;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> c = <span class="hljs-number">1</span>; c &lt;= t; c++) &#123;<span class="hljs-comment">//用于输出行号</span><br><span class="hljs-type">int</span> n;<br>cin &gt;&gt; n;<br><span class="hljs-built_in">memset</span>(cnt, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(cnt));<span class="hljs-comment">//清空</span><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span> * n - <span class="hljs-number">1</span>; i++) &#123;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;<br><span class="hljs-type">int</span> x;<br>cin &gt;&gt; x;<br>cnt[x]++;<br>&#125;<br>&#125;<br><span class="hljs-comment">// 收集出现奇数次的身高</span><br><span class="hljs-built_in">memset</span>(m, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(m));<span class="hljs-comment">//清空</span><br><span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; <br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">2505</span>; i++) &#123;<br><span class="hljs-keyword">if</span> (cnt[i] % <span class="hljs-number">2</span>) m[k++] = i;<br>&#125;<br><span class="hljs-built_in">sort</span>(m, m + k);<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Case #%d:&quot;</span>, c);<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; k; i++) &#123;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; %d&quot;</span>, m[i]);<br>&#125;<br>cout &lt;&lt; endl;<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>注意事项：</p><ol><li><p>不要学我把 <code>cin</code>，<code>cout</code> 和 <code>scanf</code>，<code>printf</code> 混用，虽然这样你可能也会 A 了这道题，但这也是不好的习惯。</p></li><li><p>因为有 $T$ 组测试用例，所以每次处理要清空。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Google Code Jam</tag>
+      
+      <tag>数学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>洛谷P5741题解</title>
     <link href="/2025/07/11/%E6%B4%9B%E8%B0%B7P5741%E9%A2%98%E8%A7%A3/"/>
     <url>/2025/07/11/%E6%B4%9B%E8%B0%B7P5741%E9%A2%98%E8%A7%A3/</url>
