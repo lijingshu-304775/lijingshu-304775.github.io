@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>洛谷P2415题解</title>
+    <link href="/2025/07/24/%E6%B4%9B%E8%B0%B7P2415%E9%A2%98%E8%A7%A3/"/>
+    <url>/2025/07/24/%E6%B4%9B%E8%B0%B7P2415%E9%A2%98%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题意：给定一个包含不超过 $30$ 个元素的集合，求所有子集的元素之和。例如，集合 ${2,3}$ 的所有子集为 $\varnothing, { 2 }, { 3 }, { 2, 3 }$，其元素和为 $2+3+2+3&#x3D;10$。</p><p>通过观察可以发现，每个元素在所有子集中出现的次数是相同的。</p><p>对于一个大小为 $n$ 的集合，每个元素出现的次数为 $2^{n-1}$。例如，集合 ${2,3}$ 中，元素 $2$ 和 $3$ 各出现 $2$ 次 $2^{2-1}&#x3D;2$。</p><p>所以所有子集的元素之和为 $\left( \sum_{i&#x3D;1}^{n} a_i \right) \times 2^{n-1}$。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> int long long</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> a[<span class="hljs-number">30</span>];<br><span class="hljs-function"><span class="hljs-type">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br><span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>, sum = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">while</span> (cin &gt;&gt; a[cnt]) &#123;<br>sum += a[cnt];<br>cnt++;<br>&#125;<br><span class="hljs-type">int</span> mul = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; cnt; i++) mul *= <span class="hljs-number">2</span>;<br>cout &lt;&lt; sum * mul;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>洛谷P13190题解</title>
     <link href="/2025/07/21/%E6%B4%9B%E8%B0%B7P13190%E9%A2%98%E8%A7%A3/"/>
     <url>/2025/07/21/%E6%B4%9B%E8%B0%B7P13190%E9%A2%98%E8%A7%A3/</url>
