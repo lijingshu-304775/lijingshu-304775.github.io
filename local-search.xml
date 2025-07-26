@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>洛谷P13491题解</title>
+    <link href="/2025/07/26/%E6%B4%9B%E8%B0%B7P13491%E9%A2%98%E8%A7%A3/"/>
+    <url>/2025/07/26/%E6%B4%9B%E8%B0%B7P13491%E9%A2%98%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题意：要求判断能否将字符串 $S$ 分割成若干连续子串，然后通过重新排列这些子串的顺序，使其与字符串 $T$ 完全相同。两个字符串长度均为 $n$，且只包含小写英文字母。</p><p>这道题的关键在于：如果 $S$ 能通过分割重组得到 $T$，那么 $S$ 和 $T$ 必须包含完全相同的字符（包括每个字符的数量）。</p><p>因为，如果两个字符串包含的字符种类或数量不同，无论如何分割重组都不可能让它们相等，并且，如果两个字符串字符组成完全相同，我们总可以通过适当的分割方式（比如每个字符作为一个子串）来重组得到目标字符串。</p><p>因此，我们只需要检查 $S$ 和 $T$ 的字符计数是否完全一致即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> cnt[<span class="hljs-number">26</span>] = &#123;<span class="hljs-number">0</span>&#125;;  <span class="hljs-comment">// 用于计数每个字母的出现次数</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> n;<br>    string s, t;<br>    cin &gt;&gt; n &gt;&gt; s &gt;&gt; t;<br>    <span class="hljs-comment">// 统计S中每个字符的出现次数</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) cnt[s[i] - <span class="hljs-string">&#x27;a&#x27;</span>]++;<br>    <span class="hljs-comment">// 减去T中每个字符的出现次数</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) cnt[t[i] - <span class="hljs-string">&#x27;a&#x27;</span>]--;<br>    <span class="hljs-comment">// 检查所有字符的计数是否都为0</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">26</span>; i++) &#123;<br>        <span class="hljs-keyword">if</span> (cnt[i] != <span class="hljs-number">0</span>) &#123;<br>            cout &lt;&lt; <span class="hljs-string">&quot;No&quot;</span>;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>    &#125;<br>    cout &lt;&lt; <span class="hljs-string">&quot;Yes&quot;</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>梦熊比赛</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>洛谷P2415题解</title>
     <link href="/2025/07/24/%E6%B4%9B%E8%B0%B7P2415%E9%A2%98%E8%A7%A3/"/>
     <url>/2025/07/24/%E6%B4%9B%E8%B0%B7P2415%E9%A2%98%E8%A7%A3/</url>
