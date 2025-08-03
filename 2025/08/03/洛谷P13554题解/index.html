@@ -19,22 +19,22 @@
   <meta name="author" content="lijingshu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P8591。 分析题意：给定 $n$ 条线段，需将每条线段染成红色或黑色。要求红色线段互不相交，且每条黑色线段至少与一条红色线段相交。目标是最小化红色线段的总长度和。 这道题的核心是选择合适的红色线段，既要保证它们互不相交，又要能 “覆盖” 所有黑色线段。也就是，所有未被选作红色的线段必须与至少一条红色线段相交，而红色线段">
+    <meta name="description" content="分析题意：小 C 要给小 G 买至少 $a$ 个奶龙玩偶，玩偶原价是每个 $x$ 元。不过有个促销活动：如果单次买满 $y$ 个，每个的单价就降到 $z$ 元，其中 $z \le x$。我们需要算出小 C 最少要花多少钱。 要找到最少花费，得考虑两种可能的购买方案，然后选便宜的那个：  不凑促销：直接买刚好 $a$ 个，按原价 $x$ 算，花费是 $a \times x$。  凑促销：如果买的数量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="洛谷P8591题解">
-<meta property="og:url" content="https://lijingshu-304775.github.io/2025/07/28/%E6%B4%9B%E8%B0%B7P8591%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:title" content="洛谷P13554题解">
+<meta property="og:url" content="https://lijingshu-304775.github.io/2025/08/03/%E6%B4%9B%E8%B0%B7P13554%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="lijingshu&#39;s blog">
-<meta property="og:description" content="题目链接：https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P8591。 分析题意：给定 $n$ 条线段，需将每条线段染成红色或黑色。要求红色线段互不相交，且每条黑色线段至少与一条红色线段相交。目标是最小化红色线段的总长度和。 这道题的核心是选择合适的红色线段，既要保证它们互不相交，又要能 “覆盖” 所有黑色线段。也就是，所有未被选作红色的线段必须与至少一条红色线段相交，而红色线段">
+<meta property="og:description" content="分析题意：小 C 要给小 G 买至少 $a$ 个奶龙玩偶，玩偶原价是每个 $x$ 元。不过有个促销活动：如果单次买满 $y$ 个，每个的单价就降到 $z$ 元，其中 $z \le x$。我们需要算出小 C 最少要花多少钱。 要找到最少花费，得考虑两种可能的购买方案，然后选便宜的那个：  不凑促销：直接买刚好 $a$ 个，按原价 $x$ 算，花费是 $a \times x$。  凑促销：如果买的数量">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-28T11:02:05.000Z">
-<meta property="article:modified_time" content="2025-07-28T11:02:50.228Z">
+<meta property="article:published_time" content="2025-08-03T09:59:59.000Z">
+<meta property="article:modified_time" content="2025-08-03T10:00:43.554Z">
 <meta property="article:author" content="lijingshu">
-<meta property="article:tag" content="DP">
+<meta property="article:tag" content="梦熊比赛">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>洛谷P8591题解 - lijingshu&#39;s blog</title>
+  <title>洛谷P13554题解 - lijingshu&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="洛谷P8591题解"></span>
+            <span id="subtitle" data-typed-text="洛谷P13554题解"></span>
           
         </div>
 
@@ -216,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-28 19:02" pubdate>
-          2025年7月28日 晚上
+        <time datetime="2025-08-03 17:59" pubdate>
+          2025年8月3日 下午
         </time>
       </span>
     
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          505 字
+          279 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          5 分钟
+          3 分钟
         
       </span>
     
@@ -276,19 +276,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">洛谷P8591题解</h1>
+            <h1 id="seo-header">洛谷P13554题解</h1>
             
             
               <div class="markdown-body">
                 
-                <p>题目链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8591">https://www.luogu.com.cn/problem/P8591</a>。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题意：给定 $n$ 条线段，需将每条线段染成红色或黑色。要求红色线段互不相交，且每条黑色线段至少与一条红色线段相交。目标是最小化红色线段的总长度和。</p>
-<p>这道题的核心是选择合适的红色线段，既要保证它们互不相交，又要能 “覆盖” 所有黑色线段。也就是，所有未被选作红色的线段必须与至少一条红色线段相交，而红色线段之间不能有交集。</p>
-<p>先将所有线段按左端点从小到大排序，便于后续的处理。</p>
-<p>设 $f_i$ 表示前 $i$ 条线段中，第 $i$ 条线段为红色时的最小总长度和。</p>
-<p>对于第 $i$ 条线段，寻找之前的红色线段 $j$ 并且 $j &lt; i$，要求 $i$ 和 $j$ 不相交（满足 $l_i$ &gt; $r_j$），且 $j$ 能覆盖中间可能存在的黑色线段。可以维护一个最大值 Max 来确保中间线段能被有效覆盖，这样更新 $f_i$ 的最小值。</p>
-<p>最后在所有可能作为最后一条红色线段的 $f_i$ 中取最小值，该红色线段需能覆盖最后一条线段（如果最后一条是黑色）。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span> &#123;<br>	<span class="hljs-type">int</span> l, r;<br>&#125; a[<span class="hljs-number">3005</span>];<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(node a, node b)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> a.l &lt; b.l;<br>&#125;<br><span class="hljs-type">int</span> f[<span class="hljs-number">3005</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-type">int</span> n;<br>	cin &gt;&gt; n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) cin &gt;&gt; a[i].l &gt;&gt; a[i].r;<br>	<span class="hljs-built_in">sort</span>(a + <span class="hljs-number">1</span>, a + n + <span class="hljs-number">1</span>, cmp);<br>	<span class="hljs-built_in">memset</span>(f, <span class="hljs-number">0x3f3f3f3f</span>, <span class="hljs-built_in">sizeof</span>(f));<span class="hljs-comment">//将数组的每一项设为一个较大的数</span><br>	f[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>	a[<span class="hljs-number">0</span>].r = <span class="hljs-number">-1e9</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) &#123;<br>		<span class="hljs-type">int</span> Max = <span class="hljs-number">-1e9</span>;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = i - <span class="hljs-number">1</span>; j &gt;= <span class="hljs-number">0</span>; j--) &#123;<br>			<span class="hljs-keyword">if</span>(a[i].l &lt;= a[j].r || a[j].r &lt; Max) <span class="hljs-keyword">continue</span>;<br>			Max = <span class="hljs-built_in">max</span>(Max, a[j].l);<br>			f[i] = <span class="hljs-built_in">min</span>(f[i], f[j] + a[i].r - a[i].l);<br>		&#125;<br>	&#125;<br>	<span class="hljs-type">int</span> ans = <span class="hljs-number">1e9</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)&#123;<br>		<span class="hljs-keyword">if</span>(a[i].r &gt;= a[n].l) ans = <span class="hljs-built_in">min</span>(ans, f[i]);<br>	&#125;<br>	cout &lt;&lt; ans;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题意：小 C 要给小 G 买至少 $a$ 个奶龙玩偶，玩偶原价是每个 $x$ 元。不过有个促销活动：如果单次买满 $y$ 个，每个的单价就降到 $z$ 元，其中 $z \le x$。我们需要算出小 C 最少要花多少钱。</p>
+<p>要找到最少花费，得考虑两种可能的购买方案，然后选便宜的那个：</p>
+<ol>
+<li><p>不凑促销：直接买刚好 $a$ 个，按原价 $x$ 算，花费是 $a \times x$。</p>
+</li>
+<li><p>凑促销：如果买的数量 $a$ 已经达到或超过 $y$，那就按促销价 $z$ 买 $a$ 个，花费是 $a$ 乘以 $z$；如果 $a$ 比 $y$ 少，那就得买 $y$ 个才能触发促销，花费是 $y \times z$。</p>
+</li>
+</ol>
+<p>最后比较这两种方案的花费，选较小的那个就是答案。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> x, y, z, a;<br>    cin &gt;&gt; x &gt;&gt; y &gt;&gt; z &gt;&gt; a;<br>    <span class="hljs-type">int</span> p1 = a * x, p2 = <span class="hljs-number">0</span>;<br>    <span class="hljs-comment">//p1：方案1，不凑促销，按原价买 a 个的花费</span><br>    <span class="hljs-comment">//p2：方案2，凑促销的花费</span><br>    <span class="hljs-keyword">if</span> (a &gt;= y) p2 = a * z;<br>    <span class="hljs-keyword">else</span> p2 = y * z;<br>    cout &lt;&lt; <span class="hljs-built_in">min</span>(p1, p2);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -321,7 +323,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/DP/" class="print-no-link">#DP</a>
+        <a href="/tags/%E6%A2%A6%E7%86%8A%E6%AF%94%E8%B5%9B/" class="print-no-link">#梦熊比赛</a>
       
     </div>
   
@@ -333,8 +335,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>洛谷P8591题解</div>
-      <div>https://lijingshu-304775.github.io/2025/07/28/洛谷P8591题解/</div>
+      <div>洛谷P13554题解</div>
+      <div>https://lijingshu-304775.github.io/2025/08/03/洛谷P13554题解/</div>
     </div>
     <div class="license-meta">
       
@@ -346,7 +348,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月28日</div>
+          <div>2025年8月3日</div>
         </div>
       
       
@@ -378,18 +380,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/03/%E6%B4%9B%E8%B0%B7P13554%E9%A2%98%E8%A7%A3/" title="洛谷P13554题解">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">洛谷P13554题解</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/26/%E6%B4%9B%E8%B0%B7P13491%E9%A2%98%E8%A7%A3/" title="洛谷P13491题解">
-                        <span class="hidden-mobile">洛谷P13491题解</span>
+                      <a href="/2025/07/28/%E6%B4%9B%E8%B0%B7P8591%E9%A2%98%E8%A7%A3/" title="洛谷P8591题解">
+                        <span class="hidden-mobile">洛谷P8591题解</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
